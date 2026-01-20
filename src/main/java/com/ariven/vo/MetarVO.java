@@ -7,6 +7,7 @@ import lombok.Data;
 @Builder
 public class MetarVO {
     private String icao;        // 机场代码
+    private String airportName; // 机场名称
     private String time;        // 观测时间
     private Integer windDir;    // 风向 (度)
     private Integer windSpeed;  // 风速

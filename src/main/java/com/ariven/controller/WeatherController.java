@@ -17,7 +17,7 @@ public class WeatherController {
             String code = weatherService.getMetar(icao);
             MetarVO metarVO = weatherService.formatMetar(code);
             if (metarVO!=null){
-                String data = "\n机场: ZGGG\n" +
+                String data = "\n机场: "+ metarVO.getAirportName() +" ("+ metarVO.getIcao() +")\n" +
                         "\n" +
                         "METAR: " + code +
                         "\n" +
@@ -33,6 +33,15 @@ public class WeatherController {
         } catch (Exception e) {
             log.info("无数据或输入出错: {}",e.getMessage());
             return "无数据或输入出错!";
+        }
+    }
+
+    public String getAtis(String icao) {
+        try {
+            return weatherService.getAtis(icao);
+        } catch (Exception e) {
+            log.error("Error generating ATIS", e);
+            return "生成通波失败: " + e.getMessage();
         }
     }
 }
