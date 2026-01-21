@@ -12,7 +12,7 @@ public class RouteController {
     private final IFlightRouteService flightRouteService=new FlightRouteServiceImpl();
     public String getRoute(String params){
 	String[] parts=params.split(" ");
-	FlightRouteVO flightRouteVO=flightRouteService.findShortestPath(parts[0],parts[1]);
+	FlightRouteVO flightRouteVO=flightRouteService.findShortestPath(parts[0].toUpperCase(),parts[1].toUpperCase());
 	String data=
 		flightRouteVO.getStartICAO()+"✈"+flightRouteVO.getEndICAO() +"\n" +
 		"\n" +
