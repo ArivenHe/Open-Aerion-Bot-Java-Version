@@ -77,6 +77,12 @@
     mvn clean compile exec:java
     ```
 
+
+### 快速使用
+1. 在release页面下载最新版本;
+2. 上传至服务器
+3. 修改 **config/application.properties**中的配置
+4. 导航数据更新上传**little_navmap_navigraph.sqlite**至文件目录即可
 ---
 
 ## 📂 项目结构
