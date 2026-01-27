@@ -19,7 +19,6 @@ import io.github.mivek.model.Cloud;
 import io.github.mivek.enums.CloudType;
 import io.github.mivek.enums.CloudQuantity;
 import java.util.List;
-import java.util.ArrayList;
 
 @Slf4j
 public class WeatherServiceImpl implements IWeatherService {
