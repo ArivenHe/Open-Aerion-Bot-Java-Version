@@ -1,6 +1,7 @@
 package com.ariven.utils;
 
 import com.ariven.pojo.Auth;
+import com.ariven.pojo.Nav;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,6 +14,9 @@ public class ConfigUtil {
     private static final Properties properties = new Properties();
     @Getter
     private static final Auth auth = new Auth();
+
+    @Getter
+    private static final Nav nav=new Nav();
 
     static {
         // First try to load from external config file
@@ -37,6 +41,10 @@ public class ConfigUtil {
         auth.setAppId(properties.getProperty("app.id"));
         auth.setAppToken(properties.getProperty("app.token"));
         auth.setAppSecret(properties.getProperty("app.secret"));
+
+        nav.setVersion(properties.getProperty("nav.version"));
+
+
         log.info("Configuration loaded successfully");
     }
 
