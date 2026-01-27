@@ -1,4 +1,4 @@
-# Open-Aerion-Bot (Java Version)
+# Open-Aerion-Bot (通用版本)
 
 这是一个基于 Java 21 开发的航空主题 QQ 群机器人。项目旨在为模拟飞行爱好者和专业用户提供便捷的航空气象查询、航路查询以及自动化 ATIS 通播生成服务。
 
